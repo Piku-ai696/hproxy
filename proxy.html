@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Proxy Player</title>
+  <style>
+    body {
+      margin: 0;
+      background: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+  <script>
+    const videoId = new URLSearchParams(window.location.search).get('video');
+    if (videoId) {
+      document.write(`<iframe src="https://www.hentaicity.com/embed/${videoId}" allowfullscreen scrolling="no"></iframe>`);
+    } else {
+      document.body.innerHTML = "<h2 style='color: white;'>No video found</h2>";
+    }
+  </script>
+</body>
+</html>
